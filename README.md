@@ -7,3 +7,7 @@ PoC impl of the following pitfall:
 signatures  
 • Pretend to be satoshi as one can forge signature if the verification does not check 𝑚 • Same 𝑑 and 𝑘 used in ECDSA & Schnorr signature, leads to 
 leaking of 𝑑  
+
+# Implementation
+## Implement ECDSA signature:   
+## Achieve ECDSA certification:
