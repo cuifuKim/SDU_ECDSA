@@ -103,44 +103,46 @@ def Schnorr_and_ECDSA(r1, s1, R, s2, m, n):
 
 ### TestDetail.
 
-#### 测试签名和验证
+#### Test signature and verification
 ```python
   r,s=Ecdsa_Sign(m,n,G,d,k)
-  print("签名为:",r,s)
+  print("Signifiture:",r,s)
   print("验证结果为：")
   Ecdsa_Verify(m,n,G,r,s,P)
 ```
-#### 泄露k导致密钥泄露
+#### Leaking K leads to key leakage
 ```python
   if (d == k_Leaking(r,n,k,s,m)):
-     print("验证成功")
+     print("Validation successful...")
 ```
-#### 重用k导致密钥泄露
+#### Reusing K leads to key disclosure
 ```python
   r_1,s_1=Ecdsa_Sign(m_1,n,G,d,k)
   r_2,s_2=Ecdsa_Sign(m,n,G,7,k)
   if (d == k_Reuse(r,s,m,r_1,s_1,m_1,n)):
-     print("验证成功")
+     print("Validation successful...")
 ```
-#### 使用相同k，可互相计算密钥
+#### Using the same K, keys can be calculated from each other
 ```python
-  print("验证结果为：")
+  print("The verification result is：")
   Use_the_Same_k(s_1,m_1,s_2,m,r,5,7,n)
 ```
-#### r,-s同样为有效签名
+#### r. -s is also a valid signature
 ```python
-  print("测试结果为：")
+  print("The test result is：")
   Ecdsa_Verify(m,n,G,r,-s,P)
 ```
-#### 伪装中本聪
+#### Camouflage Nakamoto Cong
 ```python
-  print("伪装是否成功：")
+  print("Whether the camouflage is successful：")
   Pretend(r,s,n,G,P)
 ```
-#### Schnorr_Sign签名、ecdsa签名使用相同的d，k，导致密钥泄露
+#### Schnorr_ Sign signature and ECDSA signature use the same D, K, which leads to key disclosure
 ```python
-  r3,s3=Schnorr_Sign(m,n,G,d,k)#第六问
+  r3,s3=Schnorr_Sign(m,n,G,d,k)
   d2=Schnorr_and_ECDSA(r,s,r3,s3,m,n)
-  print("破解是否成功：")
+  print("Whether the cracking is successful：")
   print(d == d2)
 ```
+
+## Done...
