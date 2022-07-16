@@ -1,5 +1,5 @@
-# SDU_ECDSA
-
+# ECDSA
+##### % holder(CuifuKim) %  
 PoC impl of the following pitfall:  
 • Leaking 𝑘 leads to leaking of 𝑑   
 • Reusing 𝑘 leads to leaking of 𝑑  
