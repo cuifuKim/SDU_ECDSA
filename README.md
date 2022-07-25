@@ -11,7 +11,7 @@ leaking of 𝑑
 # Implementation
 <br>  
 <center>  
-<img src="Execute_picture" width="695" height="479">
+<img src="Execute_picture.png" width="695" height="479">
 </center>  
 
 ## Implement ECDSA signature:   
