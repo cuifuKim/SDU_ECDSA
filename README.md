@@ -150,4 +150,4 @@ def Schnorr_and_ECDSA(r1, s1, R, s2, m, n):
   print(d == d2)
 ```
 
-## Done...
+## End
